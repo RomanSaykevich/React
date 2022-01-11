@@ -6,7 +6,9 @@ const Comment = (props) => {
     return (
         <div>
             {id}. {name} -- {email}
+            <br/>
             {body}
+            <hr/>
         </div>
     );
 };

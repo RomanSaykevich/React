@@ -6,6 +6,7 @@ const User = (props) => {
     return (
         <div>
             {id}.  {name}  {surname} - {email}
+            <hr/>
         </div>
     );
 };

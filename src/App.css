@@ -46,9 +46,10 @@
 
 }
 .users{
+  padding: 10px;
   border: solid 3px silver;
   border-radius: 10px;
-  width: 617px;
+  width: 597px;
 }
 .posts{
   padding: 10px;

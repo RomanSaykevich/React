@@ -6,7 +6,9 @@ const Post = (props) => {
     return (
         <div>
             {id}. {title}
+<br/>
             {body}
+            <hr/>
         </div>
     );
 };

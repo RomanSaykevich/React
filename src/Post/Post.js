@@ -9,11 +9,6 @@ const Post = (props) => {
 <br/>
             {body}
             <hr/>
-
-
-
-
-
         </div>
     );
 };

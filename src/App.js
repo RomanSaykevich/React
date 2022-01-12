@@ -1,6 +1,6 @@
 import './App.css';
 
-import Flights from "./Flights/Flights";
+import Flights from "./components/Flights/Flights";
 
 
 function App() {

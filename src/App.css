@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+img{
+  height: 100px;
+}
+.fig{
+  border: solid 2px black;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  margin-top: 10px;
+  height: 100px;
+}

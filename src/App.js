@@ -1,7 +1,7 @@
 import './App.css';
-import Users from "./Users/Users";
-import Posts from "./Posts/Posts";
-import Comments from "./Comments/Comments";
+import Users from "./components/Users/Users";
+import Posts from "./components/Posts/Posts";
+import Comments from "./components/Comments/Comments";
 
 function App() {
     return (

@@ -6,7 +6,7 @@ const Post = (props) => {
     return (
         <div>
             {id}. {title}
-<br/>
+            <br/>
             {body}
             <hr/>
         </div>

@@ -1,24 +1,24 @@
-
 import './App.css';
 import Users from "./Users/Users";
 import Posts from "./Posts/Posts";
 import Comments from "./Comments/Comments";
+
 function App() {
-  return (
-      <div className={'container'}>
+    return (
+        <div className={'container'}>
             <div className="users">
-            <Users/>
+                <Users/>
             </div>
             <div className="posts">
-            <Posts/>
+                <Posts/>
             </div>
             <div className="comments">
-            <Comments/>
+                <Comments/>
             </div>
 
 
-      </div>
-  );
+        </div>
+    );
 }
 
 export default App;

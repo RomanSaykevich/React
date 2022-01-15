@@ -3,6 +3,7 @@ import {urls} from "../../configs/urls";
 
 export const postService = {
 
-    getPostId: (id) => axiosService.get(`${urls.posts}?getUserId=${id}`)
-        .then(value => value.data)
+    getPostId: (id) =>
+        axiosService.get(`${urls.posts}?userId=${id}`)
+            .then(value => value.data)
 }

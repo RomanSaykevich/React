@@ -18,17 +18,22 @@ const App = () => {
     }
 
     const getUserId = (id) => {
-        postService.getPostId(id).then(value => setPosts(value))
+        postService.getPostId(id)
+            .then(value => setPosts(value))
 
     }
 
     return (
+
         <div>
-            <div  className={'users'}>
+            <div className={'users'}>
                 <Users getUser={getUser}/>
                 {user && <UserDetails user={user} getUserId={getUserId}/>}
+
             </div>
+
             {posts && <Posts posts={posts}/>}
+
         </div>
     );
 };

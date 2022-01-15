@@ -1,11 +1,10 @@
-import React from 'react';
-
-
-
-const Post = ({getPostId}) => {
+const Post = ({post: {id, userId, title, body}}) => {
     return (
         <div>
-            {/*<button onClick={()=> getPostId }>full</button>*/}
+            <div>Id: {id}</div>
+            <div>UserId: {userId}</div>
+            <div>Title: {title}</div>
+            <div>Body: {body}</div>
         </div>
     );
 };

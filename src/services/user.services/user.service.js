@@ -1,14 +1,8 @@
+import {axiosService} from "../axios.service/axiose.service";
 import {urls} from "../../configs/urls";
 
-const getAll = ()=>{
-    return fetch(urls.users)
-        .then(value => value.json())
-}
-const getId =(id)=>{
-    return fetch(`${urls.users}/${id}`)
-        .then(value => value.json())
-}
-export const userService ={
-    getAll,
-    getId
+
+export const userService = {
+    getAll: () => axiosService.get(urls.users).then(value => value.data)
+
 }

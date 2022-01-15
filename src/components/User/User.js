@@ -1,12 +1,13 @@
-import React from 'react';
+import user from './user.css'
 
-const User = ({user: {id, name, username}, getUserId}) => {
-
+const User = ({user, getUser}) => {
+    const {id, name} = user;
     return (
-        <div>
-            {id}. {name} {username}
-            <button onClick={() => getUserId(id)}>GetDetails</button>
+        <div className={'user'}>
+            <div>{id}) {name}</div>
+            <button onClick={()=>getUser(user)}>Details</button>
         </div>
+
     );
 };
 

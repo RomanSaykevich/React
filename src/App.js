@@ -8,18 +8,18 @@ import css from './users.css'
 
 const App = () => {
 
-    const [user, setUser] = useState(null)
-    const [posts, setPosts] = useState([])
+    const [users, setUsers] = useState(null)
+    const [postInfo, setPostInfo] = useState([])
 
 
     const getUser = (user) => {
-        setUser(user)
-        setPosts([])
+        setUsers(user)
+        setPostInfo([])
     }
 
     const getUserId = (id) => {
         postService.getPostId(id)
-            .then(value => setPosts(value))
+            .then(value => setPostInfo(value))
 
     }
 
@@ -27,12 +27,12 @@ const App = () => {
 
         <div>
             <div className={'users'}>
-                <Users getUser={getUser}/>
-                {user && <UserDetails user={user} getUserId={getUserId}/>}
+                <Users getDetails={getUser}/>
+                {users && <UserDetails user={users} getUserId={getUserId}/>}
 
             </div>
 
-            {posts && <Posts posts={posts}/>}
+            {postInfo && <Posts posts={postInfo}/>}
 
         </div>
     );

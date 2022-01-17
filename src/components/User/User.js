@@ -1,10 +1,12 @@
 import React from 'react';
 
+import useCss from './useCss.css'
+
 const User = ({user}) => {
 
     const {id, name, username, email} = user;
     return (
-        <div>
+        <div className={'useCss'}>
             <div>id - {id}</div>
             <div>name - {name}</div>
             <div>username - {username}</div>

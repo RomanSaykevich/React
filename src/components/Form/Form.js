@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import filt from './filt.css'
 
 const Form = ({getFilter}) => {
 
@@ -14,12 +15,12 @@ const Form = ({getFilter}) => {
         getFilter(form)
     }
     return (
-        <div>
-            <form>
+        <div className={'filter'}>
+            <form className={'filter2'}>
                 <div> Name <input type="text" name={'name'} value={form.name} onChange={formUser}/></div>
                 <div> Username <input type="text" name={'username'} value={form.username} onChange={formUser}/></div>
                 <div> Email <input type="text" name={'email'} value={form.email} onChange={formUser}/></div>
-                <button onClick={buttonOnClick}>Filter Users</button>
+                <button onClick={buttonOnClick} className={'btn'}>Filter Users</button>
                 
             </form>
         </div>

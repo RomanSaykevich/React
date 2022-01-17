@@ -1,0 +1,10 @@
+.useCss{
+    border: 5px solid #dad9d9;
+    box-shadow: 0 15px 30px rgb(196, 196, 196), 0 20px 20px rgb(196, 196, 196);
+    padding: 5px;
+    margin: 5px;
+    width: 300px;
+    margin-left: 30px;
+    color: #605f5f;
+    border-radius: 10px;
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 
 const User = ({user}) => {
 
@@ -6,7 +7,7 @@ const User = ({user}) => {
 
     return (
         <div>
-            {id}. {name}
+            <Link to={id.toString()} state={user}> {id}. {name}</Link>
         </div>
     );
 };

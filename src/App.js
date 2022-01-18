@@ -6,6 +6,7 @@ import HomePage from "./Pages/HomePage/HomePage";
 import UserPage from "./Pages/UserPage/UserPage";
 import PostPage from "./Pages/PostPage/PostPage";
 import Collection from "./Components/Collection/Collection";
+import DetailsPage from "./Pages/DetailsPage/DetailsPage";
 
 const App = () => {
     return (
@@ -15,6 +16,7 @@ const App = () => {
                 <Route path={'/'} element={<Collection/>}>
                     <Route path={'/'} element={<HomePage/>}/>
                     <Route path={'/users'} element={<UserPage/>}/>
+                    <Route path={'/users/:id'} element={<DetailsPage/>}/>
                     <Route path={'/posts'} element={<PostPage/>}/>
                 </Route>
 

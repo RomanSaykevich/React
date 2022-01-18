@@ -7,7 +7,7 @@ const User = ({user}) => {
 
     return (
         <div>
-            <Link to={id.toString()} state={user}> {id}. {name}</Link>
+             {id}. {name} <Link to={id.toString()} state={user}>Details</Link>
         </div>
     );
 };

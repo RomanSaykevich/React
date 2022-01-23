@@ -1,0 +1,19 @@
+.up {
+    background: aqua;
+    color: #8d8888;
+    height: 70px;
+
+}
+
+.down {
+    display: flex;
+}
+
+.index2 {
+    display: flex;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}

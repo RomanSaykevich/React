@@ -1,0 +1,6 @@
+.fff {
+    display: flex;
+    justify-content: space-between;
+    background: #ffff7e;
+    min-height: 673px;
+}

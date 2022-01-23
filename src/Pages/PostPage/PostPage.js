@@ -3,7 +3,7 @@ import {Outlet} from "react-router-dom";
 
 import {postService} from "../../Services/post.service/post.service";
 import Post from "../../Components/Post/Post";
-
+import postcc from './postcc.css'
 
 const PostPage = () => {
 
@@ -11,11 +11,11 @@ const PostPage = () => {
 
     useEffect(() => {
         postService.getAll()
-            .then(value => setPost([value]))
+            .then(value => setPost([...value]))
     }, [])
 
     return (
-        <div>
+        <div className={'postc'}>
             <div>
                 {post.map(post => <Post key={post.id} post={post}/>)}
             </div>

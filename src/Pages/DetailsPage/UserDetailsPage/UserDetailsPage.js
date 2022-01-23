@@ -1,7 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import {useLocation, useParams} from "react-router-dom";
+import {Link, Outlet, useLocation, useParams} from "react-router-dom";
 
 import {userService} from "../../../Services/user.service/user.service";
+import PostUser from "../../../Components/PostUser/PostUser";
+import usercss from "./usercss.css"
 
 const UserDetailsPage = () => {
 
@@ -9,40 +11,47 @@ const UserDetailsPage = () => {
 
     const [user, setUser] = useState([])
 
-    const {state: users} = useLocation();
+    const {state} = useLocation();
 
     useEffect(() => {
-        if (users){
-            setUser(user)
+        if (state){
+            setUser(state)
             return
         }
         userService.getId(id)
             .then(value => setUser({...value}))
-    }, [])
+    }, [id])
 
     return (
-        <div>
-            {users && (
+        <div className={'detUandP'}>
+            {user && (
                 <div>
-                    <div>id - {users.id}</div>
-                    <div>name - {users.name}</div>
-                    <div>username - {users.username}</div>
-                    <div>email - {users.email}</div>
-                    <div>address: street - {users.address.street}</div>
-                    <div>suite - {users.address.suite}</div>
-                    <div>city - {users.address.city}</div>
-                    <div>zipcode - {users.address.zipcode}</div>
-                    <div>geo: lat - {users.address.geo.lat}</div>
-                    <div>lng - {users.address.geo.lng}</div>
-                    <div>phone:{users.phone}</div>
-                    <div>website:{users.website}</div>
-                    <div>company: name - {users.company.name}</div>
-                    <div>catchPhrase - {users.company.catchPhrase}</div>
-                    <div>bs - {users.company.bs}</div>
+                    <div>id - {user.id}</div>
+                    <div>name - {user.name}</div>
+                    <div>username - {user.username}</div>
+                    <div>email - {user.email}</div>
+                    <div>address: street - {user.address?.street}</div>
+                    <div>suite - {user.address?.suite}</div>
+                    <div>city - {user.address?.city}</div>
+                    <div>zipcode - {user.address?.zipcode}</div>
+                    <div>geo: lat - {user.address?.geo?.lat}</div>
+                    <div>lng - {user.address?.geo?.lng}</div>
+                    <div>phone:{user.phone}</div>
+                    <div>website:{user.website}</div>
+                    <div>company: name - {user.company?.name}</div>
+                    <div>catchPhrase - {user.company?.catchPhrase}</div>
+                    <div>bs - {user.company?.bs}</div>
+
 
                 </div>
             )
             }
+                <div>
+                <Link to={'posts'} route={<PostUser/>}> <button>Posts </button> </Link>
+                </div>
+
+                <Outlet/>
+
 
         </div>
     );

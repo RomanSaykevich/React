@@ -1,0 +1,4 @@
+.postss{
+    display: flex;
+    flex-direction: column;
+}

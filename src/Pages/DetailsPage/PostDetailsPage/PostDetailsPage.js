@@ -1,7 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import {useLocation, useParams} from "react-router-dom";
+import {Link, Outlet, useLocation, useParams} from "react-router-dom";
 
 import {postService} from "../../../Services/post.service/post.service";
+import PostComment from "../../../Components/PostComment/PostComment";
+import postd from './postd.css'
 
 const PostDetailsPage = () => {
 
@@ -9,11 +11,11 @@ const PostDetailsPage = () => {
 
     const [post, setPost] = useState([]);
 
-    const {state: posts} = useLocation();
+    const {state} = useLocation();
 
     useEffect(()=>{
-        if(posts){
-            setPost(post)
+        if(state){
+            setPost(state)
             return
         }
         postService.getId(id)
@@ -21,16 +23,21 @@ const PostDetailsPage = () => {
     },[])
 
     return (
-        <div>
-            {posts &&(
+        <div className={'postd'}>
+            {post &&(
                 <div>
-                    <div>id - {posts.id}</div>
-                    <div>userId - {posts.userId}</div>
-                    <div>title - {posts.title}</div>
-                    <div>body - {posts.body}</div>
+                    <div>id - {post.id}</div>
+                    <div>userId - {post.userId}</div>
+                    <div>title - {post.title}</div>
+                    <div>body - {post.body}</div>
                 </div>
             )
             }
+            <div className={'postcomment'}>
+                <Link to={'comments'} route={<PostComment/>}><button> Comments</button></Link>
+            </div>
+
+            <Outlet/>
         </div>
     );
 };

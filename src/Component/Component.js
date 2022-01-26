@@ -8,12 +8,14 @@ const reducer = (state, action) => {
             return {...state, count1: state.count1 - 1}
         case 'reset1':
             return {...state, count1: 0}
+
         case 'inc2':
             return {...state, count2: state.count2 + 5}
         case 'dec2':
             return {...state, count2: state.count2 - 5}
         case 'reset2':
             return {...state, count2: 5}
+
         case 'inc3':
             return {...state, count3: state.count3 + 10}
         case 'dec3':

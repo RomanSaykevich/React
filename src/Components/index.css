@@ -1,0 +1,20 @@
+.catDog{
+    display: flex;
+justify-content: center;
+    margin-top: 20px;
+
+}
+.formd{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.dogCat{
+    margin-left: 30px;
+}
+.deleteDog{
+    margin-left: 29px;
+}
+.deleteCat{
+    margin-right: 167px;
+}

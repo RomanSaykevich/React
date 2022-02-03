@@ -1,13 +1,12 @@
+import React from 'react';
+import {Cars, Form} from "./Components";
 
-import Form from "./Components/Form/Form";
-import Cars from "./Components/Cars/Cars";
 
 const App = () => {
-
     return (
         <div>
             <Form/>
-            <Cars/>
+           <Cars/>
         </div>
     );
 };

@@ -13,7 +13,7 @@ const {id, model,price,year} = car
                 <div>Model: {model}</div>
                 <div>Price: {price}</div>
                 <div>Year: {year}</div>
-                <button onClick={()=>dispatch(carToUpdate({car}))}>Delete</button>
+                <button onClick={()=>dispatch(carToUpdate({car}))}>Update</button>
             </div>
         </div>
     );

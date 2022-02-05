@@ -7,9 +7,8 @@ import {Cars} from "./Components";
 import PostPage from "./Pages/PostPages/PostPage";
 import CommentPages from "./Pages/CommentPages/CommentPages";
 
-
-
 const App = () => {
+
     return (
         <div>
             <Routes>

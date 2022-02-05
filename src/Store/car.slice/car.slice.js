@@ -1,4 +1,5 @@
 import {createSlice, createAsyncThunk} from "@reduxjs/toolkit";
+
 import {carServices} from "../../Services";
 
 const initialState = {
@@ -7,6 +8,7 @@ const initialState = {
     error: null,
     carForUpdate: null
 }
+
 export const getAllCars = createAsyncThunk(
     'cars/getAllCars',
     async (_, {rejectWithValue}) => {
@@ -20,6 +22,7 @@ export const getAllCars = createAsyncThunk(
 
     }
 )
+
 export const updateCarById = createAsyncThunk(
     'carSlice/updateCarById',
     async ({id, car}, {dispatch}) => {
@@ -27,6 +30,7 @@ export const updateCarById = createAsyncThunk(
         dispatch(updateCar({car: newCar}))
     }
 )
+
 const carSlice = createSlice({
     name: 'carSlice',
     initialState,
@@ -54,6 +58,6 @@ const carSlice = createSlice({
 });
 
 const carReducer = carSlice.reducer;
-export const {carToUpdate, updateCar} = carSlice.actions
 
+export const {carToUpdate, updateCar} = carSlice.actions
 export default carReducer
